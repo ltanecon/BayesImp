@@ -14,7 +14,7 @@ Format_Input <- function(id,wave,income,CPI,weight=1,bottom.threshold=1,top.thre
 
   if (n != length(wave) | n!=length(top.threshold) | n!=length(bottom.threshold)| n!=length(weight) | n!=length(income)) stop("The lengths of the input vectors do not match")
 
-  df <- data.frame(id=id,wave=wave,weight=weight,bottom.threshold=bottom.threshold,top.threshold=top.threshold,income=income)
+  df <- data.frame(id=id,wave=wave,weight=weight,bottom.threshold=bottom.threshold,top.threshold=top.threshold,income=income, CPI=CPI)
 
   df$Type <- 1*(df$income>=df$bottom.threshold)+1*(df$income>=df$top.threshold)
 
