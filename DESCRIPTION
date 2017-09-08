@@ -1,15 +1,14 @@
 Package: BayesImp
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Bayesian Imputation Method
 Version: 0.1.0
-Author: Tan, Li
+Author: Tan, Li <l.tan@mail.missouri.edu>
 Maintainer: Tan, Li <l.tan@mail.missouri.edu>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: GPL 3
-Encoding: UTF-8
+Description: A Bayesian imputation method to impute the top-coded income data in longitudinal surveys
+License: GPL-3
 LazyData: true
-Depends: R (>= 3.1.0)
+Depends: R (>= 3.2.3)
 Imports: GB2, REBayes 
 SystemRequirements: In order to install the REBayes package, the MOSEK (http://www.mosek.com) software and 
-    license (free for academic) are necessary.
+    license (free for academic use) are necessary.
+
