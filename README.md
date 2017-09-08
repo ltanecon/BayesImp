@@ -32,4 +32,4 @@ Raw data containing top-coded income observations is first orginzed by `Format_I
 
 `Imputation_Method.R` generates the imputed income values from the Bayesian imputation method.
 
-    
+
