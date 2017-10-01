@@ -1,7 +1,7 @@
 \name{Example_GB2_param}
 \alias{Example_GB2_param}
 \docType{data}
-\title{The Estiamted GB2 distribution Parameters
+\title{The GB2 distribution Parameters
 %%   ~~ data name/kind ... ~~
 }
 \description{ A list file contains the estimated GB2 distribution parameters for each \code{wave} of the 1996 SIPP Analytic data.
@@ -9,7 +9,7 @@
 }
 \usage{data("Example_GB2_param")}
 \format{
-A list of 12.
+A list of 12, each list contains parameters for one wave.
 }
 \details{
 %%  ~~ If necessary, more details than the __description__ above ~~

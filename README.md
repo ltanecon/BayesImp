@@ -1,5 +1,5 @@
 # BayesImp
-The Bayesian Imputation Method
+The Bayesian Imputation Method (Preliminary Version)
 
 ## INSTALLATION GUIDE
 
@@ -20,16 +20,20 @@ Step 2: Install package BayesImp from Github with the following R code:
 
 ## INTRODUCTION
 
-This R package includes the Bayesian imputation method introduced in the paper:
+In this R package, I focus on imputing top-coded income observations in longitudinal surveys. The standard approaches of imputation method in the literature originates from cross-sectional applications, in which top-coded observations are handled with a wave-by-wave basis. Although the standard approaches are frequently employed to impute the top-coded observations in longitudinal data applications, they are not designed to handle the extra dimension of complexity presented in longitudinal data, in which the same individual is tracked across periods. Ignoring this extra information available in sample will lead to many unfavorable consequences, including over-prediction of income volatility within individual. 
 
-Tan, Li (2017), Imputing Top-Coded Income Data in Longitudinal Surveys, Working Papers.
+I develop two new imputation methods to tackle this problem. First, I show that the quality of imputed income values for top earners in longitudinal surveys can be improved significantly by incorporating information from multiple time periods into the imputation process in a simple way, which I refer to as rank-based method. The additional model complexity introduced by the rank-based method is very modest compared to the standard approaches, but the imputation accuracy is considerably improved both at the distributional and individual level. With the 1996 SIPP data, I show the rank-based method can reduce Root Mean Squared Error (RMSE) by 9% to 40% relative to the standard approaches. Moreover, I further improve on the rank-based method by developing an innovative, Bayesian-based method, which works even better empirically. It closely recovers the distributions of income levels and volatility, and at the same time has better imputation accuracy at the individual level: it reduces RMSE by 19% to 46% relative to the standard approaches. 
+
+For more details see my job market paper
+
+Tan, Li (2017), Imputing Top-Coded Income Data in Longitudinal Surveys, Working Papers. [(link)](http://litaneconomics.com/Job_Market_Paper.pdf)
 
 ## USAGE
 
-Raw data containing top-coded income observations is first orginzed by `Format_Input.R` to create a formatted `data.frame` for further process. Example of output see: `SIPP1996Analytic.rda`
+1. Input the longitudianl information into a `data.frame` with `SIPP1996Analytic.rda`.
 
-`GB2MLE.R` estimates the GB2 parameters for each wave of the formatted data. Example of output see: `Example_GB2_param.rda`
+2. Generate imputed income values with `Imputation_Method.R`.
 
-`Imputation_Method.R` generates the imputed income values from the Bayesian imputation method.
+
 
 
