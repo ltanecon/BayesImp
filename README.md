@@ -26,7 +26,7 @@ I develop two new imputation methods to tackle this problem. First, I show that 
 
 For more details see my job market paper
 
-Tan, Li (2017), Imputing Top-Coded Income Data in Longitudinal Surveys, Working Papers. [(link)](http://litaneconomics.com/Job_Market_Paper.pdf)
+Tan, Li (2017), Imputing Top-Coded Income Data in Longitudinal Surveys, Working Papers. ([link])(http://litaneconomics.com/Job_Market_Paper.pdf)
 
 ## USAGE
 

@@ -1,3 +1,22 @@
+#' The Imputated Income Values Simulator
+#'
+#' @description A function to populate imputed income values by the standard, rank-based and Bayesian methods.
+#'
+#' @param df The longitudinal file.
+#' @param par The GB2 distribution parameters. If not provided, the parameters will be estimated based \code{df}.
+#' @param standard Flag for generating imputed values by the standard method in the output.
+#' @param rank_based Flag for generating imputed values by the rank_based method in the output.
+#' @param Bayesian Flag for generating imputed values by the Bayesian method in the output.
+#' @param select How many waves are used to estimate prior distribution. If NA, then all waves will be used.
+#' @param prior.grid Controls the number of bins in \link[REBayes]{WGLVmix}.
+#' @param rtol The relative tolerance for dual gap convergence criterion used in \link[REBayes]{KWDual}.
+#'
+#' @return A \link{data.frame} contains the input with extra columns shown the imputed income values.
+#' @examples
+#' Imputation_Method(df = SIPP1996Analytic, par = Example_GB2_param, standard = 1, rank_based = 1, Bayesian = 1, select = NA, prior.grid = 50, rtol = 1e-11)
+#'
+#' @references Tan, Li (2017), Imputing Top-Coded Income Data in Longitudinal Surveys, Working Paper. (\href{http://litaneconomics.com/Job_Market_Paper.pdf}{link})
+
 Imputation_Method <- function (df, par = NULL, standard = 1, rank_based = 1, Bayesian = 1, select = NA, prior.grid = 50, rtol = 1e-11){
 
   if (standard+rank_based+Bayesian == 0) stop("Choose at least one method")

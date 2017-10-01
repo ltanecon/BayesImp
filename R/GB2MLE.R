@@ -1,3 +1,14 @@
+#' Estimating the GB2 Distribution Parameters by MLE
+#'
+#' @description This function estimates the GB2 parameters by MLE. The log-likelihood function is adjusted to account for the bottom-coded and top-coded income observations. Each \code{wave} are estimated separately.
+#'
+#' @param df The longitudinal file.
+#'
+#' @return A list file contains the estimated GB2 distribution parameters for each \code{wave}.
+#' @examples
+#' GB2MLE(df = SIPP1996Analytic)
+#' @references Tan, Li (2017), Imputing Top-Coded Income Data in Longitudinal Surveys, Working Paper. (\href{http://litaneconomics.com/Job_Market_Paper.pdf}{link})
+
 GB2MLE <- function(df){
 
   par <- list()

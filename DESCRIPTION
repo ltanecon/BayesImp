@@ -11,4 +11,4 @@ Depends: R (>= 3.2.3)
 Imports: GB2, REBayes 
 SystemRequirements: In order to install the REBayes package, the MOSEK (http://www.mosek.com) software and 
     license (free for academic use) are necessary.
-
+RoxygenNote: 6.0.1.9000

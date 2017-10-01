@@ -1,8 +1,17 @@
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
+#' Convert raw data into a \code{data.frame}
+#'
+#' @description This function process the raw longitudinal information and store them in a \code{data.frame}
+#'
+#' @param id Vector of a unique longitudinal identifier for a survey unit across all waves.
+#' @param wave Vector of survey data collection periods.
+#' @param income Vector of income corrsponding to \code{id} and \code{wave}.
+#' @param CPI Vector of CPI corrsponding to \code{wave}.
+#' @param weight Vector of survey weight corrsponding to \code{id}.
+#' @param bottom.threshold Vector of income bottom-coding threshold corrsponding to \code{id} and \code{wave}, or a single value.
+#' @param top.threshold Vector of income top-coding threshold corrsponding to \code{id} and \code{wave}, or a single value.
+#'
+#' @return A \code{data.frame} contains all nesscary information for futher processing in \link{GB2MLE} and \link{Imputation_Method}.
+#' @references Tan, Li (2017), Imputing Top-Coded Income Data in Longitudinal Surveys, Working Paper. (\href{http://litaneconomics.com/Job_Market_Paper.pdf}{link})
 
 Format_Input <- function(id,wave,income,CPI,weight=1,bottom.threshold=1,top.threshold){
 
